@@ -1,0 +1,34 @@
+{
+  "name": "@greetz/node-metrics",
+  "version": "1.0.3",
+  "description": "Client for gathering metricizes from nodejs application and exposing them on endpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreetzNL/metrics-client.git"
+  },
+  "keywords": [
+    "node",
+    "metrics",
+    "prometheus",
+    "metricize"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreetzNL/metrics-client/issues"
+  },
+  "homepage": "https://github.com/GreetzNL/metrics-client#readme",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "dependencies": {
+    "prom-client": "^11.5.3"
+  }
+}
