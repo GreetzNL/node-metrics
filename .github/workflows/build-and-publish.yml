@@ -1,0 +1,56 @@
+name: Build & Publish
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1.0.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1.2.0
+        with:
+          node-version: '10.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Linting
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    name: Publish to GitHub Package Registry
+    runs-on: ubuntu-latest
+    if: contains(github.ref, 'master')
+    needs: build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1.0.0
+        with:
+          ref: master
+
+      - name: Set up Node.js for GPR
+        uses: actions/setup-node@v1.2.0
+        with:
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@greetznl'
+
+      - name: Install dependencies before publish
+        run: npm ci
+
+      - name: Publish package to GPR
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
