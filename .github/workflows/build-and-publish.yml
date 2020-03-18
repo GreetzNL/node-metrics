@@ -42,9 +42,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@greetznl'
 
-      - name: Install dependencies before publish
-        run: npm ci
-
       - name: Publish package to GPR
         run: npm publish
         env:
