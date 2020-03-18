@@ -24,11 +24,6 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
   publish:
     name: Publish to GitHub Package Registry
     runs-on: ubuntu-latest
