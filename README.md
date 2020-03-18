@@ -7,14 +7,14 @@ It uses default metricizes of [**prom-client**](https://www.npmjs.com/package/pr
 
 ### Install
 ```
-npm i @greetz/node-metrics -P
+npm i @greetznl/node-metrics -P
 ```
 <br>
 
 ### Usage
 ```javascript
 // import module
-const nodeMetrics = require('@greetz/node-metrics');
+const nodeMetrics = require('@greetznl/node-metrics');
 
 // provide the http server on which will be risen the "/internal/metrics" endpoint
 nodeMetrics(server)
