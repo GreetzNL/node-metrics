@@ -1,5 +1,5 @@
 {
-  "name": "@greetz/node-metrics",
+  "name": "@greetznl/node-metrics",
   "version": "1.0.3",
   "description": "Client for gathering metricizes from nodejs application and exposing them on endpoints",
   "main": "index.js",
@@ -7,10 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "eslint lib"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GreetzNL/metrics-client.git"
-  },
+  "repository": "git@github.com:GreetzNL/node-metrics.git",
   "keywords": [
     "node",
     "metrics",
