@@ -1,3 +1,4 @@
+[![Build Status](https://github.com/GreetzNL/node-metrics/workflows/Build%20&%20Publish/badge.svg)](https://github.com/GreetzNL/node-metrics/workflows/Build%20&%20Publish)
 # node-metrics
 Application for gathering metrics from Node.js applications and exposing them on `/internal/metrics` endpoint in “prometheus” format with simple HTTP authentication.
 
