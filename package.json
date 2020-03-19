@@ -1,6 +1,6 @@
 {
   "name": "@greetznl/node-metrics",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Client for gathering metricizes from nodejs application and exposing them on endpoints",
   "main": "index.js",
   "scripts": {
